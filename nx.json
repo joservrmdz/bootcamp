@@ -43,5 +43,9 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "bootcamp"
+  "defaultProject": "bootcamp",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "nxCloudAccessToken": "Mzk0NDg3YTktMDE5ZS00MGI0LTlmNWMtNjJhMGU1OGVlODgxfHJlYWQtd3JpdGU="
 }
