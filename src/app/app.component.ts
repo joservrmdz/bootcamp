@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import {Component} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'bootcamp-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    standalone: true,
+    imports: [RouterModule],
+    selector: 'bootcamp-root',
+    template: `
+      <header>
+          <h1> Hola Soy Bob.</h1>
+    </header>
+    `,
 })
 export class AppComponent {
-  title = 'bootcamp';
 }
