@@ -18,8 +18,24 @@ export class ShyftApiService {
         url.searchParams.set('wallet', publicKey);
         url.searchParams.set('token', this.mint);
 
-        return this.httpClient.get<{ result: { balance: number; info: { image: string }; address:string } }
+        return this.httpClient.get<{ result: { balance: number; info: { image: string; name:string; symbol: string }; address: string } }
         >(url.toString(), {headers: this.header})
             .pipe(map(response => response.result));
+    }
+
+    getTransactions(publicKey: string | undefined | null) {
+        if (!publicKey) {
+            return of(null);
+        }
+
+        const url = new URL('https://api.shyft.to/sol/v1/transaction/history')
+        url.searchParams.set('network', 'mainnet-beta');
+        url.searchParams.set('account', 'F62kZ8kJ6c4GxP8AU2F7e5M7xQjwkJorEV9NS4Yi3c81');
+
+        return this.httpClient.get<{
+            result: [{ timestamp: string; fee: number; fee_payer: string }]
+        }>(url.toString(), {headers: this.header})
+            .pipe(map(response => response.result)
+            );
     }
 }

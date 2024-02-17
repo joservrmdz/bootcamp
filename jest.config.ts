@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'bootcamp',
+  displayName: 'grimlock',
   preset: './jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: './coverage/bootcamp',
+  coverageDirectory: './coverage/grimlock',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
