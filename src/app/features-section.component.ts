@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-    selector: 'bob-features-section',
+    selector: 'grimlock-features-section',
     template: `
         <section class="p-16">
             <ul class="flex justify-center items-center gap-2">

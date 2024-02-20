@@ -43,7 +43,7 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "bootcamp",
+  "defaultProject": "grimlock",
   "affected": {
     "defaultBase": "main"
   },

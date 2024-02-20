@@ -1,8 +1,8 @@
 {
-  "name": "bootcamp",
+  "name": "grimlock",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "bootcamp",
+  "prefix": "grimlock",
   "sourceRoot": "./src",
   "tags": [],
   "targets": {
@@ -12,7 +12,7 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/bootcamp",
+        "outputPath": "dist/grimlock",
         "index": "./src/index.html",
         "browser": "./src/main.ts",
         "polyfills": [
@@ -59,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "bootcamp:build:production"
+          "buildTarget": "grimlock:build:production"
         },
         "development": {
-          "buildTarget": "bootcamp:build:development"
+          "buildTarget": "grimlock:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -70,7 +70,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "bootcamp:build"
+        "buildTarget": "grimlock:build"
       }
     }
   }
