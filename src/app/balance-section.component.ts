@@ -4,7 +4,6 @@ import {ShyftApiService} from "./shyft-api.service";
 import {WalletStore} from "@heavy-duty/wallet-adapter";
 import {toSignal} from "@angular/core/rxjs-interop";
 import {computedAsync} from "ngxtension/computed-async";
-import {map} from "rxjs";
 
 @Component({
     selector: 'grimlock-balance-section',
