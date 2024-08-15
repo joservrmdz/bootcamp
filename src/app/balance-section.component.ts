@@ -10,7 +10,7 @@ import {map} from "rxjs";
     selector: 'grimlock-balance-section',
     template: `
         <section class="px-24 py-32 bg-white bg-opacity-5 relative">
-            <p class="top text-center text-2xl relative">WALLET BALANCE</p>
+            <p class="top text-center text-3xl relative">WALLET BALANCE</p>
             <div class="flex justify-center mb-4 relative">
                 <hd-wallet-multi-button></hd-wallet-multi-button>
             </div>
