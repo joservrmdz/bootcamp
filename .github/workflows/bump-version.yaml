@@ -1,39 +1,26 @@
-name: Bump Version
+name: Bump Version and Release
 
 on:
   push:
     branches:
-      - main  # Change to the branch where you want to bump the version (e.g., main or develop)
+      - main
 
 jobs:
   bump-version:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Specify the version of Node.js your project uses
+          node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Bump patch version
+        run: npm version patch
 
-      - name: Bump version
+      - name: Push changes
         run: |
-          git clean -fd
-          CURRENT_VERSION=$(node -p "require('./package.json').version")
-          echo "Current version: $CURRENT_VERSION"
-
-          # Increment version (default is patch)
-          NEW_VERSION=$(npm version patch -m "Bump version to %s")
-
-          echo "New version: $NEW_VERSION"
-
-      - name: Push version bump
-        run: |
-          git config --global user.email "joseramonrivera21@gmail.com"
-          git config --global user.name "Jose"
-          git push --follow-tags
+          git push origin main --tags
+          git push
