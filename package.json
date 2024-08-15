@@ -1,5 +1,5 @@
 {
-  "name": "@grimlock/source",
+  "name": "grimlock-bootcamp",
   "version": "0.0.3",
   "license": "MIT",
   "scripts": {
@@ -30,7 +30,7 @@
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~17.1.0",
+    "@angular-devkit/build-angular": "^17.3.8",
     "@angular-devkit/core": "~17.1.0",
     "@angular-devkit/schematics": "~17.1.0",
     "@angular-eslint/eslint-plugin": "~17.0.0",
