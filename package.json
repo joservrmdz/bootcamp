@@ -80,6 +80,16 @@
         "section": "Authentication Features"
       },
       {
+        "type": "feat",
+        "scope": "settings",
+        "section": "Settings Features"
+      },
+      {
+        "type": "feat",
+        "scope": "balance",
+        "section": "Balance Features"
+      },
+      {
         "type": "fix",
         "scope": "auth",
         "section": "Authentication Bug Fixes"
