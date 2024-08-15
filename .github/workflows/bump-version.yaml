@@ -21,6 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set Git user identity
+        run: |
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+
       - name: Bump version and generate changelog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
