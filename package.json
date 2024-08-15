@@ -1,6 +1,6 @@
 {
   "name": "grimlock-bootcamp",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
@@ -53,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "autoprefixer": "^10.4.0",
+    "conventional-changelog": "^6.0.0",
     "eslint": "~8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "jest": "^29.4.1",
@@ -72,6 +73,32 @@
     "includedScripts": []
   },
   "standard-version": {
-    "preset": "./conventional-changelog-custom.js"
+    "types": [
+      {
+        "type": "feat",
+        "scope": "auth",
+        "section": "Authentication Features"
+      },
+      {
+        "type": "feat",
+        "scope": "settings",
+        "section": "Settings Features"
+      },
+      {
+        "type": "feat",
+        "scope": "balance",
+        "section": "Balance Features"
+      },
+      {
+        "type": "fix",
+        "scope": "auth",
+        "section": "Authentication Bug Fixes"
+      }
+    ],
+    "parserOpts": {
+      "noteKeywords": [
+        "BREAKING CHANGE"
+      ]
+    }
   }
 }
