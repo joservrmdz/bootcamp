@@ -16,16 +16,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify the version of Node.js your project uses
-
-      - name: Clean untracked files
-        run: git clean -fd
+          node-version: '18'  # Specify the version of Node.js your project uses
 
       - name: Install dependencies
         run: npm install
 
       - name: Bump version
         run: |
+          git clean -fd
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           echo "Current version: $CURRENT_VERSION"
 
