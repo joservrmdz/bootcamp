@@ -1,15 +1,12 @@
 {
   "name": "grimlock-bootcamp",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "release": "standard-version"
-  },
-  "standard-version": {
-    "commitAll": true
+    "release": "standard-version --releaseCount 0"
   },
   "private": true,
   "dependencies": {
