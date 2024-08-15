@@ -6,7 +6,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "release": "standard-version --releaseCount 0"
+    "release": "standard-version"
   },
   "private": true,
   "dependencies": {
@@ -70,5 +70,19 @@
   },
   "nx": {
     "includedScripts": []
+  },
+  "standard-version": {
+    "types": [
+      { "type": "feat", "section": "Features" },
+      { "type": "fix", "section": "Bug Fixes" },
+      { "type": "chore", "hidden": true },
+      { "type": "docs", "hidden": true },
+      { "type": "style", "hidden": true }
+    ],
+    "parserOpts": {
+      "noteKeywords": [
+        "LGB"
+      ]
+    }
   }
 }
