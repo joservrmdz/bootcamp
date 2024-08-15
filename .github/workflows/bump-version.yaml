@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '16'  # Specify the version of Node.js your project uses
 
+      - name: Clean untracked files
+        run: git clean -fd
+
       - name: Install dependencies
         run: npm install
 
